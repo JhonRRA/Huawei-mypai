@@ -16,27 +16,46 @@
     position: relative;
   }
   
-  /* Menú lateral */
-  .sidebar-menu {
-    list-style: none;
-    padding: 0;
-    margin-bottom: auto; /* Esto empuja las opciones del menú hacia arriba */
-  }
-  
-  .menu-item {
-    margin-bottom: 20px;
-  }
-  
-  .menu-link {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .menu-link:hover {
-    color: #007BFF;
-  }
+
+/* Estilo para cada cuadro en el menú lateral */
+/* Menú lateral */
+.sidebar-menu {
+  list-style: none; /* Elimina los puntos de la lista */
+  padding: 0; /* Elimina el relleno predeterminado */
+  margin: 0; /* Elimina el margen predeterminado */
+}
+
+.menu-item {
+  margin-bottom: 20px; /* Espacio entre cuadros */
+}
+
+.menu-box {
+  background-color: #ffffff; /* Fondo blanco para los cuadros */
+  border: 1px solid #ddd; /* Borde del cuadro */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un mejor efecto visual */
+  text-align: center; /* Centrar el contenido del cuadro */
+  padding: 10px; /* Relleno dentro del cuadro */
+  transition: transform 0.2s, background-color 0.2s; /* Animación para hover */
+}
+
+.menu-box:hover {
+  background-color: #f0f0f0; /* Cambio de color al pasar el mouse */
+  transform: scale(1.05); /* Aumenta el tamaño ligeramente */
+}
+
+.menu-link {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: #333; /* Color del texto */
+  font-size: 18px; /* Tamaño del texto */
+  font-weight: bold; /* Negrita */
+}
+
+.menu-link:hover {
+  color: #007BFF; /* Cambia el color al pasar el mouse */
+}
+
+
   
  /* Cuadro de información del usuario */
 .user-box {
