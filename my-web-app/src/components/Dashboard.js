@@ -11,12 +11,12 @@ const Dashboard = () => {
       <nav className="dashboard-sidebar">
         {/* Contenedor del logo */}
         <div className="logo-container">
-          <img src="/images/logo.png" alt="App Logo" className="app-logo" />
+          <img src="/images/logo2.png" alt="App Logo" className="app-logo" />
         </div>
         {/* Menú lateral */}
         <ul className="sidebar-menu">
           <li className="menu-item">
-            <Link to="/dashbord/erp" className="menu-link">ERP</Link>
+            <Link to="/dashboard/erp" className="menu-link">ERP</Link>
           </li>
           <li className="menu-item">
             <Link to="/dashboard/chatbot" className="menu-link">Chatbot</Link>

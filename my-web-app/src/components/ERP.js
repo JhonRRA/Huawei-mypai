@@ -3,8 +3,8 @@ import React from "react";
 const ERP = () => {
   return (
     <div>
-      <h1>ERP</h1>
-      <p>Bienvenido al ERP. Aquí se mostrará información importante.</p>
+      <h1>ERP - Gestión Empresarial</h1>
+      <p>Bienvenido al módulo ERP.</p>
     </div>
   );
 };
