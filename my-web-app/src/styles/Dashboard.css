@@ -38,43 +38,46 @@
     color: #007BFF;
   }
   
-  /* Cuadro de información del usuario */
-  .user-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: #4282cc;
-    border-radius: 10px;
-    border: 1px solid #4282cc;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-  }
-  
-  .username {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .user-email {
-    font-size: 12px;
-    color: #ffffff;
-  }
-  
-  .logout-button {
-    margin-top: 10px;
-    padding: 8px 15px;
-    font-size: 14px;
-    color: #fff;
-    background-color: #ff4d4d;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .logout-button:hover {
-    background-color: #ff0000;
-  }
+ /* Cuadro de información del usuario */
+.user-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px; /* Reducimos el relleno */
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  gap: 8px; /* Espaciado más compacto entre elementos */
+}
+
+.username {
+  font-size: 16px; /* Tamaño ajustado */
+  font-weight: bold;
+  margin: 0; /* Eliminamos márgenes adicionales */
+}
+
+.user-email {
+  font-size: 12px;
+  color: #888;
+  margin: 0; /* Eliminamos márgenes adicionales */
+}
+
+.logout-button {
+  padding: 6px 10px; /* Reducimos el relleno del botón */
+  font-size: 12px; /* Tamaño de texto más compacto */
+  color: #fff;
+  background-color: #ff4d4d;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 5px; /* Espaciado reducido respecto al correo */
+}
+
+.logout-button:hover {
+  background-color: #ff0000;
+}
 
   /* Contenido principal */
   .dashboard-content {
@@ -85,21 +88,54 @@
   }
 
 /* Contenedor del logo */
+/* Contenedor del logo */
 .logo-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
-  padding: 10px;
-  background-color: #ffffff00;
-  border-radius: 20px;
-  box-shadow: 0px 4px 1px rgba(0, 0, 0, 0);
-  border: 1px solid #dddddd00;
+  padding: 10px; /* Ajusta el padding si es necesario */
+  background-color: #fff; /* Color de fondo para que destaque */
+  border: 1px solid #ddd; /* Borde alrededor del cuadro */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  margin-bottom: 20px; /* Espaciado inferior */
+  width: auto; /* Ajusta el tamaño al contenido */
+  height: auto; /* Ajusta el tamaño al contenido */
 }
 
-/* Estilo del logo */
+/* Imagen del logo */
 .app-logo {
-  width: 180px;
-  height: auto;
-  margin-bottom: 110px;
+  max-width: 100%; /* Asegura que no exceda el tamaño del contenedor */
+  max-height: 50px; /* Limita la altura para mantenerla consistente */
+  object-fit: contain; /* Asegura que la imagen se ajuste proporcionalmente */
+}
+
+
+/* Estilo para cada cuadro en el menú lateral */
+.menu-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Ajustes de los enlaces dentro del cuadro */
+.menu-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.menu-link:hover {
+  color: #007BFF;
 }

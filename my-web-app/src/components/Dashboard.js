@@ -1,11 +1,18 @@
 import React from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import Chatbot from "./Chatbot";
 import ERP from "./ERP";
 import Configuracion from "./Configuracion"; // Importamos el componente de configuración
 import "../styles/Dashboard.css";
 
 const Dashboard = () => {
+  const navigate = useNavigate(); // Hook para redirigir a otra ruta
+
+  const handleLogout = () => {
+    // Puedes agregar lógica adicional como limpiar tokens o datos del usuario aquí
+    navigate("/"); // Redirige a la página de inicio de sesión
+  };
+
   return (
     <div className="dashboard-container">
       <nav className="dashboard-sidebar">
@@ -29,7 +36,9 @@ const Dashboard = () => {
         <div className="user-box">
           <p className="username">Usuario</p>
           <p className="user-email">correo@ejemplo.com</p>
-          <button className="logout-button">Cerrar sesión</button>
+          <button className="logout-button" onClick={handleLogout}>
+            Cerrar sesión
+          </button>
         </div>
       </nav>
       <div className="dashboard-content">
