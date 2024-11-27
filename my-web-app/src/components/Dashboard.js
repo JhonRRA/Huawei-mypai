@@ -10,7 +10,7 @@ const Dashboard = () => {
   const [activeMenu, setActiveMenu] = useState(""); // Estado para rastrear el botón activo
 
   const handleLogout = () => {
-    navigate("/login");
+    navigate("/");
   };
 
   const handleMenuClick = (menu) => {
@@ -71,6 +71,7 @@ const Dashboard = () => {
         </Routes>
       </div>
     </div>
+    
   );
 };
 

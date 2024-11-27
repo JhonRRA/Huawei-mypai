@@ -1,69 +1,108 @@
+/* Estilos generales para el formulario */
 .register-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
-    font-family: Arial, sans-serif;
-  }
-  
-  .register-box {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-  }
-  
-  .register-title {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #333;
-  }
-  
-  .register-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .register-input {
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-    width: 100%;
-  }
-  
-  .register-button {
-    padding: 0.8rem;
-    background: #ff7e5f;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .register-button:hover {
-    background: #feb47b;
-  }
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-  .register-button-back {
-    margin-top: 1rem;
-    background: none;
-    color: #1500ff;
-    border: none;
-    cursor: pointer;
-    font-size: 0.9rem;
-    text-decoration: underline;
-  }
-  
-  .register-button-back:hover {
-    background: #feb47b;
-  }
-  
-  
+.register-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+  grid-template-rows: auto auto; /* Dos filas automáticas */
+  gap: 20px; /* Espacio entre elementos */
+}
+
+.form-column {
+  grid-column: span 1;
+}
+
+.form-submit-container {
+  grid-column: span 2; /* El botón ocupa ambas columnas */
+  text-align: center; /* Centra el botón horizontalmente */
+}
+
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-column .form-group input {
+  margin-bottom: 10px;
+}
+
+/* Títulos de las secciones */
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Cuadro alrededor de cada columna */
+.form-column {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Botón de registro */
+.register-button {
+  width: 20%;
+  padding: 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.register-button:hover {
+  background-color: #45a049;
+}
+
+/* Añadir un poco de espacio entre los cuadros */
+.form-column:first-child {
+  margin-right: 20px;
+}
+
+/* Contenedor externo (fondo negro) */
+.form-wrapper {
+  background-color: black; /* Fondo negro */
+  display: flex;
+  justify-content: center; /* Centra el cuadro horizontalmente */
+  align-items: center; /* Centra el cuadro verticalmente */
+  height: 100vh; /* Ocupa toda la pantalla */
+  padding: 20px; /* Espacio alrededor del cuadro */
+  box-sizing: border-box;
+}
+
+/* Cuadro del formulario */
+.register-container {
+  background-color: white; /* Fondo blanco para el formulario */
+  border: 2px solid #ccc; /* Borde del cuadro */
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+  padding: 20px; /* Espaciado interno */
+  max-width: 900px; /* Tamaño máximo del formulario */
+  width: 100%; /* Asegura que ocupe el ancho disponible */
+}
