@@ -106,3 +106,97 @@
   max-width: 900px; /* Tamaño máximo del formulario */
   width: 100%; /* Asegura que ocupe el ancho disponible */
 }
+
+/* Contenedor de los planes */
+.plans-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* Título */
+.plans-container .section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Grid para los planes */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adaptable a columnas */
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Diseño de cada tarjeta */
+.plan-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos y precios */
+.plan-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.plan-card .plan-price {
+  font-size: 18px;
+  color: #4caf50;
+  margin: 10px 0;
+}
+
+/* Lista de características */
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.plan-card ul li {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Botón para seleccionar el plan */
+.plan-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.plan-button:hover {
+  background-color: #45a049;
+}
+
+/* Botones generales del formulario */
+.register-button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  background-color: #0056b3;
+}
