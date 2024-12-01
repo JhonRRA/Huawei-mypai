@@ -1,109 +1,128 @@
 /* Contenedor principal */
 .config-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-color: #f9f9f9;
-  }
-  
-  /* Cuadro de configuración */
-  .config-box {
-    width: 400px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .config-box h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
-    text-align: center;
-  }
-  
-  /* Grupo de formulario */
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #555;
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #000000;
-    border-radius: 5px;
-  }
-  
-  .form-group textarea {
-    resize: none;
-    height: 80px;
-  }
-  
-  /* Botón de guardar */
-  .save-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  
-  .save-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .plan-options {
-    display: flex;
-    gap: 10px;
-    margin: 20px 0;
-  }
-  
-  .plan-button {
-    padding: 10px 20px;
-    border: 1px solid #ddd;
-    background-color: #766f6f;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .plan-button:hover {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .plan-button.active {
-    background-color: #007bff;
-    color: #fff;
-    border-color: #0056b3;
-  }
-  
-  .upgrade-button {
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .upgrade-button:hover {
-    background-color: #218838;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.columns-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* Cuadro de configuración */
+.config-box {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.membership-section {
+  grid-column: span 2;
+}
+
+.config-box h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+/* Grupo de formulario */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 80px;
+}
+
+/* Botones */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.save-button,
+.reset-button {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.save-button {
+  background-color: #007bff;
+}
+
+.save-button:hover {
+  background-color: #0056b3;
+}
+
+.reset-button {
+  background-color: #ff6f61;
+}
+
+.reset-button:hover {
+  background-color: #d9534f;
+}
+
+/* Planes */
+.plan-options {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.plan-button {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.plan-button:hover,
+.plan-button.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.plan-details {
+  margin-top: 10px;
+}
+
+/* Error */
+.error {
+  color: #d9534f;
+  font-size: 12px;
+}
