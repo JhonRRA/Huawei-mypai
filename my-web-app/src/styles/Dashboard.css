@@ -14,40 +14,48 @@ body {
 .dashboard-sidebar {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 250px; /* Aumenta el tamaño de la barra lateral */
-  background-color: #111439;
+  justify-content: space-between; /* Deja espacio entre las secciones */
+  width: 250px;
+  background-color: #23264c;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  position: relative;
+  height: 100vh; /* Asegura que ocupe toda la altura */
+  position: relative; /* Mantén la barra fija */
 }
   
 
 /* Estilo para cada cuadro en el menú lateral */
 /* Menú lateral */
 .sidebar-menu {
-  list-style: none; /* Elimina los puntos de la lista */
-  padding: 0; /* Elimina el relleno predeterminado */
-  margin: 0; /* Elimina el margen predeterminado */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Organiza los botones verticalmente */
+  gap: 10px; /* Espacio entre los botones */
+  flex-grow: 1; /* Permite que esta sección crezca */
 }
 
 .menu-item {
-  margin-bottom: 20px; /* Espacio entre cuadros */
+  margin-bottom: 10px; /* Espacio entre cuadros */
 }
 
 .menu-box {
-  background-color: #ffffff; /* Fondo blanco para los cuadros */
-  border: 1px solid #ddd; /* Borde del cuadro */
-  border-radius: 8px; /* Bordes redondeados */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un mejor efecto visual */
-  text-align: center; /* Centrar el contenido del cuadro */
-  padding: 12px; /* Relleno dentro del cuadro */
-  transition: transform 0.2s, background-color 0.2s; /* Animación para hover */
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 12px;
+  transition: transform 0.2s, background-color 0.2s;
+  color: #333;
+  text-decoration: none;
+  display: block;
 }
 
 .menu-box:hover {
-  background-color: #f0f0f0; /* Cambio de color al pasar el mouse */
-  transform: scale(1.03); /* Aumenta el tamaño ligeramente */
+  background-color: #f0f0f0;
+  transform: scale(1.03);
 }
 
 .menu-link {
@@ -244,3 +252,4 @@ body {
 .menu-link:hover {
   color: #007BFF;
 }
+

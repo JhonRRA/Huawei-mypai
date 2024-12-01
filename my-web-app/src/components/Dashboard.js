@@ -49,15 +49,6 @@ const Dashboard = () => {
               Chatbot
             </Link>
           </li>
-          <li className={`menu-item ${activeMenu === "configuracion" ? "active" : ""}`}>
-            <Link
-              to="/dashboard/configuracion"
-              className="menu-box"
-              onClick={() => handleMenuClick("configuracion")}
-            >
-              Configuración
-            </Link>
-          </li>
         </ul>
         {/* Información del usuario */}
         <div className="user-box">
@@ -72,7 +63,7 @@ const Dashboard = () => {
             <div className="user-menu">
               <ul>
                 <li><Link to="/my-account">Mi cuenta</Link></li>
-                <li><Link to="/configuracion">Configuración</Link></li>
+                <li><Link to="/dashboard/configuracion">Configuración</Link></li>
                 <li><button onClick={handleLogout}>Salir</button></li>
               </ul>
             </div>
