@@ -1,20 +1,26 @@
+/* Asegúrate de agregar una fuente general */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
 /* Estilo general para el contenedor del Dashboard */
 .dashboard-container {
     display: flex;
     height: 100vh;
   }
   
-  /* Barra lateral */
-  .dashboard-sidebar {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Esto asegura que los elementos se distribuyan bien */
-    width: 250px;
-    background-color: #111439;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    position: relative;
-  }
+/* Barra lateral */
+.dashboard-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px; /* Aumenta el tamaño de la barra lateral */
+  background-color: #111439;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
   
 
 /* Estilo para cada cuadro en el menú lateral */
@@ -32,16 +38,16 @@
 .menu-box {
   background-color: #ffffff; /* Fondo blanco para los cuadros */
   border: 1px solid #ddd; /* Borde del cuadro */
-  border-radius: 10px; /* Bordes redondeados */
+  border-radius: 8px; /* Bordes redondeados */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un mejor efecto visual */
   text-align: center; /* Centrar el contenido del cuadro */
-  padding: 10px; /* Relleno dentro del cuadro */
+  padding: 12px; /* Relleno dentro del cuadro */
   transition: transform 0.2s, background-color 0.2s; /* Animación para hover */
 }
 
 .menu-box:hover {
   background-color: #f0f0f0; /* Cambio de color al pasar el mouse */
-  transform: scale(1.05); /* Aumenta el tamaño ligeramente */
+  transform: scale(1.03); /* Aumenta el tamaño ligeramente */
 }
 
 .menu-link {
@@ -75,69 +81,120 @@
 
 
   
- /* Cuadro de información del usuario */
+ /* Información del usuario */
 .user-box {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px; /* Reducimos el relleno */
+  align-items: center; /* Alinea el avatar y el botón en la misma línea */
+  padding: 10px;
   background-color: #fff;
   border-radius: 10px;
   border: 1px solid #ddd;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
-  gap: 8px; /* Espaciado más compacto entre elementos */
+  gap: 10px; /* Espacio entre el avatar y el botón */
+  position: relative; /* Necesario para la posición absoluta del menú desplegable */
+}
+
+/* Imagen del avatar */
+.user-avatar {
+  width: 40px; /* Ajusta el tamaño del avatar */
+  height: 40px; /* Ajusta el tamaño del avatar */
+  border-radius: 50%; /* Hace el avatar redondo */
+  object-fit: cover; /* Asegura que la imagen del avatar se ajuste bien */
+}
+
+/* Contenedor de la información del usuario */
+.user-info {
+  text-align: center;
 }
 
 .username {
-  font-size: 16px; /* Tamaño ajustado */
+  font-size: 16px;
   font-weight: bold;
-  margin: 0; /* Eliminamos márgenes adicionales */
+  margin: 0;
 }
 
 .user-email {
   font-size: 12px;
   color: #888;
-  margin: 0; /* Eliminamos márgenes adicionales */
+  margin: 0;
 }
 
-.logout-button {
-  padding: 6px 10px; /* Reducimos el relleno del botón */
-  font-size: 12px; /* Tamaño de texto más compacto */
-  color: #fff;
-  background-color: #ff4d4d;
+/* Botón de tres puntos */
+.menu-button {
+  font-size: 20px;
+  color: #888;
+  background: none;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
-  margin-top: 5px; /* Espaciado reducido respecto al correo */
+  margin-left: auto; /* Empuja el botón de tres puntos hacia la derecha */
 }
 
-.logout-button:hover {
-  background-color: #ff0000;
+/* Menú desplegable de usuario */
+.user-menu {
+  position: absolute;
+  bottom: 50px; /* Coloca el menú hacia arriba desde el botón */
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  z-index: 10; /* Asegura que el menú esté por encima de otros elementos */
 }
+
+.user-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-menu li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-menu li:last-child {
+  border-bottom: none;
+}
+
+.user-menu li a, .user-menu li button {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 5px 10px;
+}
+
+.user-menu li a:hover, .user-menu li button:hover {
+  background-color: #f0f0f0;
+}
+
 
   /* Contenido principal */
   .dashboard-content {
     flex: 1;
-    padding: 20px;
+    padding: 30px;
     overflow-y: auto;
-    background: linear-gradient(135deg, #F8F8F9 0%, #F8F8F9 100%);
+    background-color: #F7F8F9;
   }
 
-/* Contenedor del logo */
 /* Contenedor del logo */
 .logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px; /* Ajusta el padding si es necesario */
+  padding: 20px; /* Ajusta el padding si es necesario */
   background-color: #fff; /* Color de fondo para que destaque */
   border: 1px solid #ddd; /* Borde alrededor del cuadro */
-  border-radius: 8px; /* Bordes redondeados */
+  border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
   margin-bottom: 20px; /* Espaciado inferior */
   width: auto; /* Ajusta el tamaño al contenido */
   height: auto; /* Ajusta el tamaño al contenido */
+  text-align: center;
 }
 
 /* Imagen del logo */

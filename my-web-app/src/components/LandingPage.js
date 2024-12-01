@@ -1,13 +1,19 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { useNavigate } from "react-router-dom";
 import "../styles/LandingPage.css";
 
 const LandingPage = () => {
+  const navigate = useNavigate();
+
+  const handleGetStartedClick = () => {
+    navigate("/login"); // Redirige a la página de login
+  };
+
   return (
     <div className="landing-page">
       {/* Header */}
       <header className="header">
-        <div className="logo">Landy</div>
+        <div className="logo">MyPAI</div>
         <nav>
           <ul className="nav-links">
             <li><a href="#features">Features</a></li>
@@ -15,18 +21,20 @@ const LandingPage = () => {
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
-        <button className="nav-button">Get Started</button>
+        <button className="nav-button" onClick={handleGetStartedClick}>
+          Get Started
+        </button>
       </header>
 
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1>Welcome to Landy</h1>
+          <h1>Welcome to MyPAI</h1>
           <p>Your go-to solution for showcasing projects beautifully.</p>
           <button className="cta-button">Learn More</button>
         </div>
         <div className="hero-image">
-          <img src="https://via.placeholder.com/600" alt="Hero" />
+          <img src="/images/landingpagefoto.png" alt="Example" className="Example" />
         </div>
       </section>
 
@@ -34,8 +42,7 @@ const LandingPage = () => {
       <section className="features" id="features">
         <h2>Features</h2>
         <div className="features-grid">
-          {[
-            { title: "Responsive Design", description: "Works on any device, large or small." },
+          {[{ title: "Responsive Design", description: "Works on any device, large or small." },
             { title: "Fast Performance", description: "Optimized for blazing-fast load times." },
             { title: "Customizable", description: "Easily adapt to your needs with minimal effort." },
           ].map((feature, index) => (

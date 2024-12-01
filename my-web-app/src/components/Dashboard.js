@@ -8,13 +8,18 @@ import "../styles/Dashboard.css";
 const Dashboard = () => {
   const navigate = useNavigate();
   const [activeMenu, setActiveMenu] = useState(""); // Estado para rastrear el botón activo
+  const [showUserMenu, setShowUserMenu] = useState(false); // Estado para controlar el desplegable del menú de usuario
 
   const handleLogout = () => {
-    navigate("/");
+    navigate("/"); // Redirige a la página de login o inicio
   };
 
   const handleMenuClick = (menu) => {
     setActiveMenu(menu); // Actualiza el botón activo
+  };
+
+  const toggleUserMenu = () => {
+    setShowUserMenu(!showUserMenu); // Muestra u oculta el menú de usuario
   };
 
   return (
@@ -30,7 +35,7 @@ const Dashboard = () => {
             <Link
               to="/dashboard/erp"
               className="menu-box"
-              onClick={() => handleMenuClick("erp")} // Activa el botón y redirige
+              onClick={() => handleMenuClick("erp")}
             >
               ERP
             </Link>
@@ -56,11 +61,22 @@ const Dashboard = () => {
         </ul>
         {/* Información del usuario */}
         <div className="user-box">
-          <p className="username">Usuario</p>
-          <p className="user-email">correo@ejemplo.com</p>
-          <button className="logout-button" onClick={handleLogout}>
-            Cerrar sesión
+          <div className="user-info">
+            <p className="username">Usuario</p>
+            <p className="user-email">correo@ejemplo.com</p>
+          </div>
+          <button className="menu-button" onClick={toggleUserMenu}>
+            ⋮
           </button>
+          {showUserMenu && (
+            <div className="user-menu">
+              <ul>
+                <li><Link to="/my-account">Mi cuenta</Link></li>
+                <li><Link to="/configuracion">Configuración</Link></li>
+                <li><button onClick={handleLogout}>Salir</button></li>
+              </ul>
+            </div>
+          )}
         </div>
       </nav>
       <div className="dashboard-content">
@@ -71,7 +87,6 @@ const Dashboard = () => {
         </Routes>
       </div>
     </div>
-    
   );
 };
 
