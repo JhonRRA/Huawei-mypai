@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import Chatbot from "./Chatbot";
 import ERP from "./ERP";
+import ChatbotWSPP from "./ChatbotWSPP";
 import Configuracion from "./Configuracion";
 import "../styles/Dashboard.css";
 
@@ -49,6 +50,15 @@ const Dashboard = () => {
               Chatbot
             </Link>
           </li>
+          <li className={`menu-item ${activeMenu === "ChatbotWSPP" ? "active" : ""}`}>
+            <Link
+              to="/dashboard/ChatbotWSPP"
+              className="menu-box"
+              onClick={() => handleMenuClick("ChatbotWSPP")}
+            >
+              ChatbotWSPP
+            </Link>
+          </li>
         </ul>
         {/* Información del usuario */}
         <div className="user-box">
@@ -74,6 +84,7 @@ const Dashboard = () => {
         <Routes>
           <Route path="erp" element={<ERP />} />
           <Route path="chatbot" element={<Chatbot />} />
+          <Route path="ChatbotWSPP" element={<ChatbotWSPP />} />
           <Route path="configuracion" element={<Configuracion />} />
         </Routes>
       </div>
