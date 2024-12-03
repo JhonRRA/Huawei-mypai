@@ -8,18 +8,29 @@ const ChatbotWSPP = () => {
   const [whatsappNumber, setWhatsappNumber] = useState("");
   const [accessToken, setAccessToken] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission (e.g., send data to a server)
-    console.log({
-      botName,
-      paymentMethod,
-      apiKey,
-      whatsappNumber,
-      accessToken,
-    });
-    alert("Chatbot creado con éxito!");
-  };
+    const payload = { botName, paymentMethod, apiKey, whatsappNumber, accessToken };
+
+    try {
+        const response = await fetch("http://<TU_IP_O_DOMINIO>:3000/create-bot", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+        });
+
+        if (!response.ok) {
+            throw new Error("Error al crear el chatbot.");
+        }
+        alert("Chatbot creado con éxito!");
+    } catch (err) {
+        console.error(err);
+        alert("Hubo un problema al crear el chatbot.");
+    }
+};
+
 
   return (
     <div className="chatbot-config">
