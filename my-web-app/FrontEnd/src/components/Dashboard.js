@@ -72,7 +72,6 @@ const Dashboard = () => {
           {showUserMenu && (
             <div className="user-menu">
               <ul>
-                <li><Link to="/my-account">Mi cuenta</Link></li>
                 <li><Link to="/dashboard/configuracion">Configuración</Link></li>
                 <li><button onClick={handleLogout}>Salir</button></li>
               </ul>

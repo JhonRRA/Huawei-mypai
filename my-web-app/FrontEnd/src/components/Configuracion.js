@@ -175,14 +175,6 @@ const Configuracion = () => {
           >
             Profesional
           </button>
-          <button
-            className={`plan-button ${
-              selectedPlan === "Premium" ? "active" : ""
-            }`}
-            onClick={() => handlePlanChange("Premium")}
-          >
-            Premium
-          </button>
         </div>
 
         <div className="plan-details">
@@ -200,15 +192,7 @@ const Configuracion = () => {
               <p>Beneficios: Acceso completo, soporte prioritario, informes avanzados.</p>
             </div>
           )}
-          {selectedPlan === "Premium" && (
-            <div>
-              <h3>Premium</h3>
-              <p>Precio: $50/mes</p>
-              <p>Beneficios: Todas las características, soporte dedicado, informes personalizados.</p>
-            </div>
-          )}
         </div>
-
         <button className="upgrade-button" onClick={handleUpgrade}>
           Actualizar al Plan {selectedPlan}
         </button>

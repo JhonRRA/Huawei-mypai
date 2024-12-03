@@ -39,6 +39,7 @@ const Register = () => {
   };
 
   return (
+    <div className="auth-container">
     <div className="form-wrapper">
       <div className="register-container">
         {step === 1 ? (
@@ -197,16 +198,6 @@ const Register = () => {
                 </ul>
                 <button className="plan-button">Seleccionar</button>
               </div>
-              <div className="plan-card">
-                <h3>Premium</h3>
-                <p className="plan-price">$30/mes</p>
-                <ul>
-                  <li>Usuarios ilimitados</li>
-                  <li>Soporte premium</li>
-                  <li>Acceso avanzado</li>
-                </ul>
-                <button className="plan-button">Seleccionar</button>
-              </div>
             </div>
             <div className="form-submit-container">
               <button
@@ -227,6 +218,7 @@ const Register = () => {
           </div>
         )}
       </div>
+    </div>
     </div>
   );
 };

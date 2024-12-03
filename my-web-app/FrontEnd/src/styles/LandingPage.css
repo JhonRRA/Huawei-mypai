@@ -22,7 +22,7 @@
   /* Header */
   .header {
     width: 100%;
-    background: #ffffff;
+    background: #1c253f;
     padding: 20px 50px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -36,7 +36,7 @@
   .logo {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #333;
+    color: #ffffff;
   }
   
   .nav-links {
@@ -47,7 +47,7 @@
   
   .nav-links a {
     text-decoration: none;
-    color: #555;
+    color: #ffffff;
     font-size: 1.1rem;
     transition: color 0.3s ease;
   }
@@ -76,7 +76,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 80px 20px;
-    background: linear-gradient(135deg, #007bff, #28a745);
+    background: linear-gradient(135deg, #2a2c5a, #1c253f);
     color: white;
     height: 90vh;
     width: 100%;
@@ -122,13 +122,13 @@
   .features {
     padding: 50px 20px;
     text-align: center;
-    background: #ffffff;
+    background: #1c253f;
   }
   
   .features h2 {
     font-size: 2rem;
     margin-bottom: 30px;
-    color: #333;
+    color: #ffffff;
   }
   
   .features-grid {
@@ -141,13 +141,13 @@
     background: #fff;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
   .feature-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.1);
   }
   
   .feature-item h3 {
@@ -188,7 +188,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #f8f9fa;
+    background: #1c253f;
   }
   
   .contact-form {

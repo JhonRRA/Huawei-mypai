@@ -21,8 +21,9 @@
   flex: 1;
 }
 
-.membership-section {
-  grid-column: span 2;
+.membership-section p,
+.membership-section h3 {
+  color: black;
 }
 
 .config-box h2 {
@@ -50,7 +51,7 @@
   width: 100%;
   padding: 10px;
   font-size: 14px;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   border-radius: 5px;
 }
 
@@ -103,12 +104,15 @@
 }
 
 .plan-button {
+  background-color: #78858f;
+  color: white;
   padding: 10px 20px;
-  border: 1px solid #ddd;
-  background-color: #f8f9fa;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  text-transform: uppercase;
+  display: block; /* Hace que el botón sea un bloque */
+  margin: 0 auto; /* Centra el botón horizontalmente */
 }
 
 .plan-button:hover,
@@ -126,3 +130,38 @@
   color: #d9534f;
   font-size: 12px;
 }
+
+/* Estilo para el botón de "Modificar Plan" */
+.upgrade-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: block; /* Convierte el botón en un bloque */
+  margin: 10px auto; /* Centra el botón horizontalmente */
+  width: fit-content; /* Ajusta el ancho al contenido del botón */
+}
+
+/* Efecto cuando el botón está en hover */
+.upgrade-button:hover {
+  background-color: #218838; /* Color más oscuro al hacer hover */
+  transform: translateY(-2px); /* Efecto de elevación */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+/* Efecto cuando el botón es clickeado */
+.upgrade-button:active {
+  transform: translateY(1px); /* Efecto de "presionado" */
+  box-shadow: none; /* Quitar sombra cuando está presionado */
+}
+
+/* Precio del plan */
+.plan-price {
+  font-size: 1.25rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
