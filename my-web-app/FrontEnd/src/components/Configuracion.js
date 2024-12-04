@@ -90,7 +90,9 @@ const Configuracion = () => {
       </div>
 
       <div className="config-box company-config">
+      <div className="title-opcion"> 
         <h2>Configuración de la Empresa</h2>
+        </div>
         <div className="form-group">
           <label htmlFor="name">Nombre de la Empresa</label>
           <input
@@ -146,7 +148,9 @@ const Configuracion = () => {
       </div>
 
       <div className="config-box membership-config">
+      <div className="title-opcion"> 
         <h2>Mejora tu Membresía</h2>
+      </div>
         <div className="plan-actual">
           <p>
             Plan actual: <strong>{currentPlan}</strong>

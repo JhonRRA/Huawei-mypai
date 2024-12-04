@@ -18,10 +18,15 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agregar sombra para efecto flotante */
 }
 
+
+.title-opcion{
+  color: white
+}
+
 .config-box h2 {
   margin-bottom: 20px;
   font-size: 24px;
-  color: black;
+  color: rgb(255, 255, 255);
   text-align: center;
   font-weight: bold;
 }
@@ -30,8 +35,8 @@
 .config-box.user-config,
 .config-box.company-config,
 .config-box.membership-config {
-  background-color: #f8f9fa; /* Cambiar a un color claro para el fondo */
-  color: black; /* Asegurar que todo el texto sea negro */
+  background-color: #0e131f; /* Cambiar a un color claro para el fondo */
+  color: rgb(255, 255, 255); /* Asegurar que todo el texto sea negro */
 }
 
 /* Grupo de formulario */
@@ -43,7 +48,7 @@
   display: block;
   margin-bottom: 5px;
   font-size: 14px;
-  color: black; /* Etiquetas de texto en negro */
+  color: rgb(255, 255, 255); /* Etiquetas de texto en negro */
 }
 
 .form-group input,
@@ -71,19 +76,19 @@
 }
 
 .save-button {
-  background-color: #007bff;
+  background-color: #FF0035;
 }
 
 .save-button:hover {
-  background-color: #0056b3;
+  background-color: #FF0035;
 }
 
 .upgrade-button {
-  background-color: #28a745;
+  background-color: #FF0035;
 }
 
 .upgrade-button:hover {
-  background-color: #218838;
+  background-color: #6a11cb;
 }
 
 /* Planes */
@@ -126,7 +131,7 @@
   padding: 10px;
   font-size: 14px;
   border: none;
-  background-color: #007bff;
+  background-color: #FF0035;
   color: white;
   border-radius: 8px;
   cursor: pointer;
@@ -154,15 +159,15 @@
 
 
 .plan-button:hover {
-  background-color: #0056b3;
+  background-color: #6a11cb;
 }
 
 /* Resaltar el plan seleccionado */
 .highlighted {
-  border: 2px solid #28a745;
-  background-color: #e0f8e0;
+  border: 2px solid #6a11cb;
+  background-color: #d9caf0;
 }
 
 .active {
-  background-color: #218838;
+  background-color: #6a11cb;
 }
