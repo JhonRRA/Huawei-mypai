@@ -11,21 +11,21 @@
 
 /* Caja de autenticación */
 .auth-box {
-  background: rgba(255, 255, 255, 0.9); /* Fondo ligeramente translúcido */
+  background: #0E131F; 
   padding: 2rem;
-  border-radius: 16px; /* Bordes redondeados */
+  border-radius: 16px; 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   width: 100%;
   max-width: 400px;
   text-align: center;
-  backdrop-filter: blur(10px); /* Efecto de desenfoque */
+  backdrop-filter: blur(10px); 
 }
 
 /* Título */
 .auth-title {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #333;
+  color: #ffffff;
   font-weight: bold;
 }
 
@@ -56,7 +56,7 @@
 /* Botón principal */
 .auth-button {
   padding: 1rem;
-  background: #2575fc;
+  background: #FF0035;
   color: white;
   border: none;
   border-radius: 8px;
@@ -82,7 +82,7 @@
 }
 
 .secondary-button:hover {
-  color: #6a11cb;
+  color: #ffffff;
 }
 
 /* Enlaces adicionales */

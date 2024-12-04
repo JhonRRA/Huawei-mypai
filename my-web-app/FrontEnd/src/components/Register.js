@@ -167,7 +167,7 @@ const Register = () => {
                 className="register-button"
                 onClick={handleNext}
               >
-                Siguiente
+                Next
               </button>
             </div>
           </form>
@@ -182,9 +182,10 @@ const Register = () => {
                 <h3>Básico</h3>
                 <p className="plan-price">$10/mes</p>
                 <ul>
-                  <li>1 usuario</li>
-                  <li>Soporte básico</li>
-                  <li>Acceso limitado</li>
+                <div className="benefit">Acceso a funciones esenciales del ERP</div>
+                <div className="benefit alt">Chatbot básico para asistencia inicial</div>
+                <div className="benefit">Soporte por correo electrónico</div>
+                <div className="benefit alt">Funciones básicas de gestión de inventarios y ventas</div>
                 </ul>
                 <button className="plan-button">Seleccionar</button>
               </div>
@@ -192,9 +193,12 @@ const Register = () => {
                 <h3>Profesional</h3>
                 <p className="plan-price">$20/mes</p>
                 <ul>
-                  <li>5 usuarios</li>
-                  <li>Soporte estándar</li>
-                  <li>Acceso completo</li>
+                <div className="benefit">Acceso completo al ERP con todas las funcionalidades</div>
+                <div className="benefit alt">Chatbot avanzado con análisis y automatización de tareas</div>
+                <div className="benefit">Personalización del ERP según las necesidades específicas de la empresa</div>
+                <div className="benefit alt">Soporte prioritario con atención directa</div>
+                <div className="benefit">Integración con otros sistemas de la empresa</div>
+                <div className="benefit alt">Funcionalidades adicionales como gestión de recursos humanos y reportes detallados</div>
                 </ul>
                 <button className="plan-button">Seleccionar</button>
               </div>

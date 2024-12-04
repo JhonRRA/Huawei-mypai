@@ -66,19 +66,19 @@ body, html {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 15px;
-  color: #333;
+  color: #ffffff;
   padding: 10px;
-  background-color: #f0f0f0;
+  background-color: #8b939c;
   border-radius: 5px;
   text-align: center;
 }
 
 /* Cuadro alrededor de cada columna */
 .form-column {
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   padding: 20px;
   border-radius: 5px;
-  background-color: #f9f9f9;
+  background-color: #38405f;
 }
 
 /* Botón de registro */
@@ -86,7 +86,7 @@ body, html {
   width: 20%;
   padding: 15px;
   background-color: #4caf50;
-  color: white;
+  color: #ffffff;
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -117,7 +117,7 @@ body, html {
 
 /* Cuadro del formulario */
 .register-container {
-  background-color: white; /* Fondo blanco para el formulario */
+  background-color: #0E131F; /* Fondo blanco para el formulario */
   border: 2px solid #ccc; /* Borde del cuadro */
   border-radius: 10px; /* Esquinas redondeadas */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
@@ -131,7 +131,7 @@ body, html {
 .plans-container {
   text-align: center;
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #38405F;
 }
 
 /* Título */
@@ -165,6 +165,26 @@ body, html {
   transform: translateY(-5px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Beneficios individuales */
+.benefits {
+  margin: 10px 0;
+}
+
+.benefit {
+  padding: 10px;
+  background-color: #f4f4f4; /* Fondo claro */
+  color: black; /* Texto negro */
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.benefit.alt {
+  background-color: #e0e0e0; /* Fondo alternado */
+}
+
 
 /* Títulos y precios */
 .plan-card h3 {
@@ -210,7 +230,7 @@ body, html {
 .register-button {
   margin: 10px;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #ff0035;
   color: white;
   border: none;
   border-radius: 5px;
@@ -218,5 +238,5 @@ body, html {
 }
 
 .register-button:hover {
-  background-color: #0056b3;
+  background-color: #6a11cb;
 }
