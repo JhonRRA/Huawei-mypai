@@ -28,7 +28,7 @@ const Chatbot = () => {
       );
       setMessages((prev) => [...prev, { text: response.data.choices[0].text }]);
     } catch (error) {
-      setMessages((prev) => [...prev, { text: "Error al obtener respuesta." }]);
+      setMessages((prev) => [...prev, { text: "Error obtaining response." }]);
     }
   };
 
@@ -50,11 +50,11 @@ const Chatbot = () => {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Escribe tu mensaje"
+          placeholder="Write your message"
           className="input"
         />
         <button onClick={handleSend} className="send-button">
-          Enviar
+          Send
         </button>
       </div>
     </div>

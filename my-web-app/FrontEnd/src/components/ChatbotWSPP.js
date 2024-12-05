@@ -13,7 +13,7 @@ const ChatbotWSPP = () => {
     const payload = { botName, paymentMethod, apiKey, whatsappNumber, accessToken };
 
     try {
-        const response = await fetch("http://<TU_IP_O_DOMINIO>:3000/create-bot", {
+        const response = await fetch("http://<YOUR_IP_OR_DOMAIN>:3000/create-bot", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -22,32 +22,32 @@ const ChatbotWSPP = () => {
         });
 
         if (!response.ok) {
-            throw new Error("Error al crear el chatbot.");
+            throw new Error("Error creating the chatbot.");
         }
-        alert("Chatbot creado con éxito!");
+        alert("Chatbot created successfully!");
     } catch (err) {
         console.error(err);
-        alert("Hubo un problema al crear el chatbot.");
+        alert("There was a problem creating the chatbot.");
     }
 };
 
 
   return (
     <div className="chatbot-config">
-      <h1>Configuración del Chatbot</h1>
+      <h1>Chatbot Settings</h1>
       <form onSubmit={handleSubmit} className="chatbot-form">
         <label>
-          Nombre del Bot:
+          Bot Name:
           <input
             type="text"
             value={botName}
             onChange={(e) => setBotName(e.target.value)}
-            placeholder="Ingrese el nombre del chatbot"
+            placeholder="Enter the chatbot name"
             required
           />
         </label>
         <label>
-          Método de Pago:
+          Payment Method:
           <select
             value={paymentMethod}
             onChange={(e) => setPaymentMethod(e.target.value)}
@@ -63,17 +63,17 @@ const ChatbotWSPP = () => {
             type="text"
             value={apiKey}
             onChange={(e) => setApiKey(e.target.value)}
-            placeholder="Ingrese la API Key"
+            placeholder="Enter the API Key"
             required
           />
         </label>
         <label>
-          Número de WhatsApp:
+          WhatsApp Number:
           <input
             type="text"
             value={whatsappNumber}
             onChange={(e) => setWhatsappNumber(e.target.value)}
-            placeholder="Ejemplo: +1234567890"
+            placeholder="Example: +1234567890"
             required
           />
         </label>
@@ -83,11 +83,11 @@ const ChatbotWSPP = () => {
             type="text"
             value={accessToken}
             onChange={(e) => setAccessToken(e.target.value)}
-            placeholder="Ingrese el Access Token"
+            placeholder="Enter the Access Token"
             required
           />
         </label>
-        <button type="submit">Crear Chatbot</button>
+        <button type="submit">Create Chatbot</button>
       </form>
     </div>
   );

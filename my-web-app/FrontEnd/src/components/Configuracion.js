@@ -3,18 +3,19 @@ import "../styles/Configuracion.css";
 
 const Configuracion = () => {
   const [userInfo, setUserInfo] = useState({
-    userName: "Nombre Usuario",
-    email: "usuario@correo.com",
+    userName: "Username",
+    email: "user@email.com",
     password: "",
     phone: "",
   });
 
   const [companyInfo, setCompanyInfo] = useState({
-    name: "Mi Empresa",
-    organizationType: "Privada",
-    industry: "Tecnología",
+    name: "My Company",
+    organizationType: "Private",
+    industry: "Technology",
     taxId: "",
     description: "",
+    
   });
 
   const [currentPlan, setCurrentPlan] = useState("Básico");
@@ -31,7 +32,7 @@ const Configuracion = () => {
   };
 
   const handleSave = () => {
-    alert("Información guardada correctamente");
+    alert("Information saved successfully");
   };
 
   const handlePlanChange = (plan) => {
@@ -40,15 +41,15 @@ const Configuracion = () => {
 
   const handleUpgrade = () => {
     setCurrentPlan(selectedPlan);
-    alert(`¡Has actualizado tu plan a ${selectedPlan}!`);
+    alert(`Your plan has been updated to ${selectedPlan}!`);
   };
 
   return (
     <div className="config-container">
       <div className="config-box user-config">
-        <h2>Configuración del Usuario</h2>
+        <h2>User Settings</h2>
         <div className="form-group">
-          <label htmlFor="userName">Nombre</label>
+          <label htmlFor="userName">Name</label>
           <input
             type="text"
             id="userName"
@@ -58,7 +59,7 @@ const Configuracion = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="email">Correo</label>
+          <label htmlFor="email">Email</label>
           <input
             type="email"
             id="email"
@@ -68,7 +69,7 @@ const Configuracion = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="password">Contraseña</label>
+          <label htmlFor="password">Password</label>
           <input
             type="password"
             id="password"
@@ -78,7 +79,7 @@ const Configuracion = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="phone">Número de Teléfono</label>
+          <label htmlFor="phone">Phone Number</label>
           <input
             type="tel"
             id="phone"
@@ -88,13 +89,12 @@ const Configuracion = () => {
           />
         </div>
       </div>
-
       <div className="config-box company-config">
       <div className="title-opcion"> 
-        <h2>Configuración de la Empresa</h2>
+        <h2>Company Settings</h2>
         </div>
         <div className="form-group">
-          <label htmlFor="name">Nombre de la Empresa</label>
+          <label htmlFor="name">Company Name</label>
           <input
             type="text"
             id="name"
@@ -104,7 +104,7 @@ const Configuracion = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="organizationType">Tipo de Organización</label>
+          <label htmlFor="organizationType">Type of Organization</label>
           <input
             type="text"
             id="organizationType"
@@ -114,7 +114,7 @@ const Configuracion = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="industry">Industria o Sector</label>
+          <label htmlFor="industry">Industry or Sector</label>
           <input
             type="text"
             id="industry"
@@ -124,7 +124,7 @@ const Configuracion = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="taxId">Número de Identificación Fiscal (Tax ID)</label>
+          <label htmlFor="taxId">Tax Identification Number (TIN)</label>
           <input
             type="text"
             id="taxId"
@@ -134,7 +134,7 @@ const Configuracion = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="description">Descripción</label>
+          <label htmlFor="description">Description</label>
           <textarea
             id="description"
             name="description"
@@ -143,64 +143,62 @@ const Configuracion = () => {
           ></textarea>
         </div>
         <button className="save-button" onClick={handleSave}>
-          Guardar
+          Save
         </button>
       </div>
 
       <div className="config-box membership-config">
       <div className="title-opcion"> 
-        <h2>Mejora tu Membresía</h2>
+        <h2>Upgrade your Membership</h2>
       </div>
         <div className="plan-actual">
           <p>
-            Plan actual: <strong>{currentPlan}</strong>
+            Current plan: <strong>{currentPlan}</strong>
           </p>
         </div>
         <div className="plan-options">
       <div
         className={`plan-column ${currentPlan === "Básico" ? "highlighted" : ""}`}
       >
-        <h3>Básico</h3>
-        <p>Precio: $10/mes</p>
+        <h3>Basic</h3>
+        <p>Price: $10/month</p>
         <div className="benefits">
-          <div className="benefit">Acceso a funciones esenciales del ERP</div>
-          <div className="benefit alt">Chatbot básico para asistencia inicial</div>
-          <div className="benefit">Soporte por correo electrónico</div>
-          <div className="benefit alt">Funciones básicas de gestión de inventarios y ventas</div>
+          <div className="benefit">Access to essential ERP functions</div>
+          <div className="benefit alt">Basic chatbot for initial assistance</div>
+          <div className="benefit">Email support</div>
+          <div className="benefit alt">Basic inventory and sales management features</div>
         </div>
         <button
           className={`plan-button ${selectedPlan === "Básico" ? "active" : ""}`}
           onClick={() => handlePlanChange("Básico")}
         >
-          Seleccionar
+          Select
         </button>
       </div>
 
       <div
         className={`plan-column ${currentPlan === "Profesional" ? "highlighted" : ""}`}
       >
-        <h3>Profesional</h3>
-        <p>Precio: $25/mes</p>
+        <h3>Professional</h3>
+        <p>Price: $25/month</p>
         <div className="benefits">
-          <div className="benefit">Acceso completo al ERP con todas las funcionalidades</div>
-          <div className="benefit alt">Chatbot avanzado con análisis y automatización de tareas</div>
-          <div className="benefit">Personalización del ERP según las necesidades específicas de la empresa</div>
-          <div className="benefit alt">Soporte prioritario con atención directa</div>
-          <div className="benefit">Integración con otros sistemas de la empresa</div>
-          <div className="benefit alt">Funcionalidades adicionales como gestión de recursos humanos y reportes detallados</div>
+          <div className="benefit">Full access to the ERP with all functionalities</div>
+          <div className="benefit alt">Advanced chatbot with task analysis and automation</div>
+          <div className="benefit">ERP customization according to the company's specific needs</div>
+          <div className="benefit alt">Priority support with direct assistance</div>
+          <div className="benefit">Integration with other company systems</div>
+          <div className="benefit alt">Additional features such as human resource management and detailed reports</div>
         </div>
         <button
           className={`plan-button ${selectedPlan === "Profesional" ? "active" : ""}`}
           onClick={() => handlePlanChange("Profesional")}
         >
-          Seleccionar
+          Select
         </button>
       </div>
     </div>
-
-
         <button className="upgrade-button" onClick={handleUpgrade}>
-          Actualizar al Plan {selectedPlan}
+        Upgrade to the Plan {selectedPlan}
         </button>
       </div>
     </div>

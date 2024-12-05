@@ -63,8 +63,8 @@ const Dashboard = () => {
         {/* Información del usuario */}
         <div className="user-box">
           <div className="user-info">
-            <p className="username">Usuario</p>
-            <p className="user-email">correo@ejemplo.com</p>
+            <p className="username">User</p>
+            <p className="user-email">email@example.com</p>
           </div>
           <button className="menu-button" onClick={toggleUserMenu}>
             ⋮
@@ -72,8 +72,8 @@ const Dashboard = () => {
           {showUserMenu && (
             <div className="user-menu">
               <ul>
-                <li><Link to="/dashboard/configuracion">Configuración</Link></li>
-                <li><button onClick={handleLogout}>Salir</button></li>
+                <li><Link to="/dashboard/configuracion">Settings</Link></li>
+                <li><button onClick={handleLogout}>Log out</button></li>
               </ul>
             </div>
           )}

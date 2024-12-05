@@ -35,7 +35,7 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Lógica para enviar el formulario, validaciones, etc.
-    console.log("Datos del formulario:", formData);
+    console.log("Form details:", formData);
   };
 
   return (
@@ -46,9 +46,9 @@ const Register = () => {
           // Paso 1: Formulario de registro
           <form onSubmit={(e) => e.preventDefault()} className="register-form">
             <div className="form-column">
-              <div className="section-title">Datos de la empresa</div>
+              <div className="section-title">Company details</div>
               <div className="form-group">
-                <label htmlFor="companyName">Nombre de la empresa</label>
+                <label htmlFor="companyName">Company name</label>
                 <input
                   type="text"
                   id="companyName"
@@ -60,7 +60,7 @@ const Register = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="organizationType">Tipo de organización</label>
+                <label htmlFor="organizationType">Type of organization</label>
                 <input
                   type="text"
                   id="organizationType"
@@ -72,7 +72,7 @@ const Register = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="industry">Industria o sector</label>
+                <label htmlFor="industry">Industry or sector</label>
                 <input
                   type="text"
                   id="industry"
@@ -85,7 +85,7 @@ const Register = () => {
 
               <div className="form-group">
                 <label htmlFor="taxNumber">
-                  Número de identificación fiscal (Tax ID)
+                  Tax Identification Number (TIN)
                 </label>
                 <input
                   type="text"
@@ -99,9 +99,9 @@ const Register = () => {
             </div>
 
             <div className="form-column">
-              <div className="section-title">Datos del usuario</div>
+              <div className="section-title">User details</div>
               <div className="form-group">
-                <label htmlFor="fullName">Nombre completo</label>
+                <label htmlFor="fullName">Full name</label>
                 <input
                   type="text"
                   id="fullName"
@@ -113,7 +113,7 @@ const Register = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="email">Correo electrónico</label>
+                <label htmlFor="email">Email address</label>
                 <input
                   type="email"
                   id="email"
@@ -125,7 +125,7 @@ const Register = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="password">Contraseña</label>
+                <label htmlFor="password">Password</label>
                 <input
                   type="password"
                   id="password"
@@ -137,7 +137,7 @@ const Register = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="confirmPassword">Reescribir contraseña</label>
+                <label htmlFor="confirmPassword">Re-enter password</label>
                 <input
                   type="password"
                   id="confirmPassword"
@@ -149,7 +149,7 @@ const Register = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="phoneNumber">Número telefónico</label>
+                <label htmlFor="phoneNumber">Phone number</label>
                 <input
                   type="tel"
                   id="phoneNumber"
@@ -175,32 +175,32 @@ const Register = () => {
           // Paso 2: Selección de planes
           <div className="plans-container">
             <div className="section-title">
-              Selecciona tu plan de suscripción
+              Select your subscription plan
             </div>
             <div className="plans-grid">
               <div className="plan-card">
-                <h3>Básico</h3>
-                <p className="plan-price">$10/mes</p>
+                <h3>Basic</h3>
+                <p className="plan-price">$10/month</p>
                 <ul>
-                <div className="benefit">Acceso a funciones esenciales del ERP</div>
-                <div className="benefit alt">Chatbot básico para asistencia inicial</div>
-                <div className="benefit">Soporte por correo electrónico</div>
-                <div className="benefit alt">Funciones básicas de gestión de inventarios y ventas</div>
+                <div className="benefit">Access to essential ERP functions</div>
+                <div className="benefit alt">Basic chatbot for initial assistance</div>
+                <div className="benefit">Email support</div>
+                <div className="benefit alt">Basic inventory and sales management features</div>
                 </ul>
-                <button className="plan-button">Seleccionar</button>
+                <button className="plan-button">Select</button>
               </div>
               <div className="plan-card">
                 <h3>Profesional</h3>
-                <p className="plan-price">$20/mes</p>
+                <p className="plan-price">$20/month</p>
                 <ul>
-                <div className="benefit">Acceso completo al ERP con todas las funcionalidades</div>
-                <div className="benefit alt">Chatbot avanzado con análisis y automatización de tareas</div>
-                <div className="benefit">Personalización del ERP según las necesidades específicas de la empresa</div>
-                <div className="benefit alt">Soporte prioritario con atención directa</div>
-                <div className="benefit">Integración con otros sistemas de la empresa</div>
-                <div className="benefit alt">Funcionalidades adicionales como gestión de recursos humanos y reportes detallados</div>
+                <div className="benefit">Full access to the ERP with all functionalities</div>
+                <div className="benefit alt">Advanced chatbot with task analysis and automation</div>
+                <div className="benefit">ERP customization according to the company's specific needs</div>
+                <div className="benefit alt">Priority support with direct assistance</div>
+                <div className="benefit">Integration with other company systems</div>
+                <div className="benefit alt">Additional features like human resource management and detailed reports</div>
                 </ul>
-                <button className="plan-button">Seleccionar</button>
+                <button className="plan-button">Select</button>
               </div>
             </div>
             <div className="form-submit-container">
@@ -209,14 +209,14 @@ const Register = () => {
                 className="register-button"
                 onClick={handleBack}
               >
-                Atrás
+                Back
               </button>
               <button
                 type="submit"
                 className="register-button"
                 onClick={handleSubmit}
               >
-                Confirmar
+                Confirm
               </button>
             </div>
           </div>
