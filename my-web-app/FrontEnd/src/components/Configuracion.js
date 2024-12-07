@@ -18,8 +18,8 @@ const Configuracion = () => {
     
   });
 
-  const [currentPlan, setCurrentPlan] = useState("Básico");
-  const [selectedPlan, setSelectedPlan] = useState("Básico");
+  const [currentPlan, setCurrentPlan] = useState("Basic");
+  const [selectedPlan, setSelectedPlan] = useState("Basic");
 
   const handleUserChange = (e) => {
     const { name, value } = e.target;
