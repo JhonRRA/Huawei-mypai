@@ -73,26 +73,33 @@ body {
 .hero {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 60px 20px;
+  justify-content: space-between; /* Centra horizontalmente el contenido */
+  padding: 0px 80px;
   background: linear-gradient(135deg, #2a2c5a, #1c253f);
   color: white;
   height: 90vh;
   width: 100%;
+  text-align: left; /* Asegura que el texto esté alineado a la izquierda */
 }
 
 .hero-content {
-  max-width: 50%;
+  max-width: 45%;
+  margin-right: 70px; /* Incrementa el espacio entre el texto y la imagen */
 }
-
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 20px;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
+  font-size: 1.9rem;
+  line-height: 1.6;
   margin-bottom: 30px;
+}
+
+.hero-image {
+  max-width: 50%; /* Limita el tamaño de la imagen */
+  object-fit: cover;
 }
 
 .cta-button {
